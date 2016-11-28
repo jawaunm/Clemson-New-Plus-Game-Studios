@@ -7,7 +7,7 @@ switch (mpos)
     }
     case 1:
     {
-       scr_loadgame(); 
+       game_load("savegame");
        break;
     }
      case 2:

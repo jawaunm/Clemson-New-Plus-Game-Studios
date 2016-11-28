@@ -349,9 +349,10 @@
     <instance objName="obj_floor" x="3008" y="4160" name="inst_31C8682E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_floor" x="2880" y="4160" name="inst_9E7498D3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_upper_left_corner" x="2752" y="4160" name="inst_EE687579" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_turret" x="1664" y="384" name="inst_5D6F0EC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ingame_menu" x="256" y="192" name="inst_2E08975D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_turret" x="2496" y="512" name="inst_5D6F0EC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_switch" x="320" y="727" name="inst_86BED673" locked="0" code="" scaleX="1.95454549789429" scaleY="2.72413802146912" colour="4294967295" rotation="0"/>
+    <instance objName="obj_control" x="64" y="64" name="inst_5A938F3F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_lighting" x="128" y="64" name="inst_5F7AADD4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

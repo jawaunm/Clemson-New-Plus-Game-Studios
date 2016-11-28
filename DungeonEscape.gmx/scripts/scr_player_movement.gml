@@ -3,6 +3,9 @@ jump_speed = argument0
 move_speed = argument1
 grav_speed = argument2
 
+show_debug_message(onGround)
+show_debug_message(second_jump)
+
 //bounce determines whether player glides smoothly up ramps or bounces up them (true = bounce, false = smooth)
 bounce = argument3
 //double jump determines if the player has the ability to double jump (true = can double jump)
@@ -12,16 +15,17 @@ double_jump = argument4
 if keyboard_check_pressed(vk_up) {
     //if player is resting on a solid object, do a normal jump
     if !place_free(x,y+1) {
-        vspeed = -jump_speed
+        vspeed = -jump_speed;
     }
     //if player can double jump, 
     else if (second_jump = true and double_jump) {
         if vspeed > 0
-            vspeed = -jump_speed
+            vspeed = -jump_speed;
         else
-            vspeed -= jump_speed/2
-        second_jump = false
+            vspeed -= jump_speed/2;
+        second_jump = false;
     }
+    onGround = false;
 }
 
 //vectical collisions
@@ -42,7 +46,8 @@ else if vspeed > 0 {
     move_contact_solid(270, 0)
     vspeed = 0
     //made contact with the floor, so restore second jump
-    second_jump = true
+    second_jump = true;
+    onGround = true;
 }
 else if vspeed < 0 {
     move_contact_solid(90, 0)
@@ -64,6 +69,7 @@ if keyboard_check(vk_left) {
         else
             y -= move_speed;
     }
+    dir = -1
 }
 if keyboard_check(vk_right) {
     //if destination is free of collisions move right
@@ -78,5 +84,6 @@ if keyboard_check(vk_right) {
         else
             y -= move_speed;
     }
+    dir = 1
 }
 

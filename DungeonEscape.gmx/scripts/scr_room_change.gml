@@ -15,12 +15,12 @@ if(instance_exists(obj_player))
     }
 
     if (obj_player.lives = 0) {
-        room_goto(game_over);  
+        room_goto(room_game_over);  
     }
   
 }
  
-if(room = game_over && keyboard_check_pressed(vk_enter)) {
-   room_goto(title_screen);  
+if(room = room_game_over && keyboard_check_pressed(vk_enter)) {
+   room_goto(room_title_screen);  
 }
  
