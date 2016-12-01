@@ -3,8 +3,6 @@ jump_speed = argument0
 move_speed = argument1
 grav_speed = argument2
 
-show_debug_message(onGround)
-show_debug_message(second_jump)
 
 //bounce determines whether player glides smoothly up ramps or bounces up them (true = bounce, false = smooth)
 bounce = argument3
@@ -57,10 +55,15 @@ else if vspeed < 0 {
 
 //manage left and right key events
 if keyboard_check(vk_left) {
+    dir = -1
     //if destination is free of collisions, move left
-    if place_free(x-move_speed, y+vspeed) {
+    if !place_free(x,y+1) {
+        script_execute(scr_player_movement_incline(move_speed))
+    }
+    else if place_free(x-move_speed, y+vspeed) {
         x -= move_speed
     }
+    /*depricated
     //if the left has a ramp, move player left and up
     else if place_meeting(x-move_speed, y+vspeed,obj_upper_right_corner) || place_meeting(x,y+1,obj_upper_right_corner) {
         x -= move_speed
@@ -68,14 +71,18 @@ if keyboard_check(vk_left) {
             vspeed -= move_speed
         else
             y -= move_speed;
-    }
-    dir = -1
+    }*/
 }
 if keyboard_check(vk_right) {
+    dir = 1
     //if destination is free of collisions move right
-    if place_free(x+move_speed, y+vspeed) {
+    if !place_free(x,y+1) {
+        script_execute(scr_player_movement_incline(move_speed))
+    }
+    else if place_free(x+move_speed, y+vspeed) {
         x += move_speed
     }
+    /* depricated
     //if the right has a ramp, move player right and up
     else if place_meeting(x+move_speed, y+vspeed,obj_upper_left_corner){
         x += move_speed
@@ -83,7 +90,6 @@ if keyboard_check(vk_right) {
             vspeed -= move_speed
         else
             y -= move_speed;
-    }
-    dir = 1
+    }*/
 }
 

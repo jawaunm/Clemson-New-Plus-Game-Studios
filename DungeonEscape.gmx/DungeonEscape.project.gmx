@@ -28,6 +28,7 @@
     <sprite>sprites\spr_switch_on</sprite>
     <sprite>sprites\spr_player_shot</sprite>
     <sprite>sprites\spr_gate</sprite>
+    <sprite>sprites\spr_terrain_map</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\title_screen_bg</background>
@@ -45,6 +46,7 @@
       <script>scripts\scr_player_init.gml</script>
       <script>scripts\scr_player_movement.gml</script>
       <script>scripts\scr_player_animations.gml</script>
+      <script>scripts\scr_player_movement_incline.gml</script>
     </scripts>
     <scripts name="menu">
       <script>scripts\scr_menu.gml</script>
@@ -85,8 +87,10 @@
     <objects name="props">
       <object>objects\obj_switch</object>
     </objects>
+    <object>objects\obj_terrain_test</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\room_test</room>
     <room>rooms\room_title_screen</room>
     <room>rooms\room_default_level</room>
     <room>rooms\room_section_2</room>
