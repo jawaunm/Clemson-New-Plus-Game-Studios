@@ -32,7 +32,6 @@
   <backgrounds name="background">
     <background>background\title_screen_bg</background>
     <background>background\game_over_bg</background>
-    <background>background\background2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
